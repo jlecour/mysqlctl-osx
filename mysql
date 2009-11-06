@@ -1,0 +1,44 @@
+#!/bin/sh
+
+set -e
+
+if [ ! "`id -u`" -eq 0 ]; then
+  echo "Must be root !"
+  exit 0
+fi
+
+LAUNCH_BIN="launchctl"
+OPTIONS="-w"
+FILE="/Library/LaunchDaemons/com.mysql.mysqld.plist"
+
+Start ()
+{
+  $LAUNCH_BIN load $OPTIONS $FILE
+}
+Stop ()
+{
+  $LAUNCH_BIN unload $OPTIONS $FILE
+}
+
+case $1 in
+	start)
+  	echo "Starting MySQL database server"
+    Start
+	;;
+	stop)
+  	echo "Stopping MySQL database server"
+    Stop
+	;;
+	restart)
+  	echo "Restarting MySQL database server"
+    Stop
+    Start
+	;;
+	*)
+		echo "Usage: $0 [start|stop|restart] "
+		exit 0
+	;;
+esac
+
+  
+  
