@@ -8,20 +8,20 @@ have a PrefPane with a nice Acqua button.
 
 I used to start launch it with 
 
-  sudo launchctl load -w /Library/LaunchDaemons/com.mysql.mysqld.plist
+    sudo launchctl load -w /Library/LaunchDaemons/com.mysql.mysqld.plist
 
 but it's a pain. I'd like to
 
-  sudo mysqlctl start
+    sudo mysqlctl start
 
 
 Installation
 ============
 
-  sudo cp com.mysql.mysqld.plist /Library/LaunchDaemons
-  sudo chown root /Library/LaunchDaemons/com.mysql.mysqld.plist
-  sudo cp mysqlctl /usr/local/bin
-  sudo chmod +x /usr/local/bin/mysqlctl
+    sudo cp com.mysql.mysqld.plist /Library/LaunchDaemons
+    sudo chown root /Library/LaunchDaemons/com.mysql.mysqld.plist
+    sudo cp mysqlctl /usr/local/bin
+    sudo chmod +x /usr/local/bin/mysqlctl
 
 Make sure that `/usr/local/bin` is in your `PATH`
 
