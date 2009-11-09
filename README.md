@@ -32,4 +32,7 @@ Credits
 I've been greatly inspired by Dan Benjamin's article about [compiling MySQL
 on Snow Leopard][danbenjamin]
 
+Thanks to [Colinux][colinux] for his advice on the naming.
+
 [danbenjamin]: http://hivelogic.com/articles/compiling-mysql-on-snow-leopard/
+[colinux]: http://twitter.com/colinux
