@@ -1,4 +1,4 @@
-mysqlctl
+mysqlctl ![Project status](http://stillmaintained.com/jlecour/mysqlctl-osx.png)
 ========
 
 mysqlctl is supposed to simplify the manual start/stop/restart
